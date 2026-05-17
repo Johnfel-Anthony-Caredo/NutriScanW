@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "Bash(Get-ChildItem C:\\\\Users\\\\jhepo\\\\Desktop\\\\NutriScans *)",
+      "Bash(mv \"C:\\\\Users\\\\jhepo\\\\Desktop\\\\NutriScans\\\\UsersjhepoDesktopNutriScans\"/* \"C:\\\\Users\\\\jhepo\\\\Desktop\\\\NutriScans\")",
+      "Bash(mv \"C:\\\\Users\\\\jhepo\\\\Desktop\\\\NutriScans\\\\UsersjhepoDesktopNutriScans\"/.* \"C:\\\\Users\\\\jhepo\\\\Desktop\\\\NutriScans\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(git add *)"
+    ]
+  }
+}
