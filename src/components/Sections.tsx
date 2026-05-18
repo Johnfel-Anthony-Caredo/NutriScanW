@@ -40,6 +40,21 @@ const screens = [
   },
 ];
 
+const trustItems = [
+  {
+    title: "Educational support, not diagnosis",
+    text: "NutriScan supports day-to-day food decisions. It does not replace clinical advice from your physician or dietitian.",
+  },
+  {
+    title: "Transparent condition logic",
+    text: "Each verdict references the specific nutrient signals relevant to your selected health profile, so you know why a food was flagged.",
+  },
+  {
+    title: "Clear language for real moments",
+    text: "Verdicts are plain-worded and specific — not generic health scores that require interpretation.",
+  },
+];
+
 export default function Sections() {
   return (
     <>
@@ -59,7 +74,7 @@ export default function Sections() {
             </div>
 
             <div className="why-evidence">
-              <div className="evidence-item">
+              <div className="evidence-item reveal-child">
                 <p className="evidence-label">The gap</p>
                 <p className="evidence-text">
                   Standard nutrition facts are designed for a general
@@ -69,7 +84,7 @@ export default function Sections() {
                 </p>
               </div>
               <div className="evidence-divider" />
-              <div className="evidence-item">
+              <div className="evidence-item reveal-child">
                 <p className="evidence-label">The real-world context</p>
                 <p className="evidence-text">
                   Most food decisions happen in seconds — during grocery runs,
@@ -79,7 +94,7 @@ export default function Sections() {
                 </p>
               </div>
               <div className="evidence-divider" />
-              <div className="evidence-item">
+              <div className="evidence-item reveal-child">
                 <p className="evidence-label">What changes with NutriScan</p>
                 <p className="evidence-text">
                   Instead of a label, you get a verdict. Instead of numbers,
@@ -107,7 +122,7 @@ export default function Sections() {
               <article
                 className={`screen-story${
                   screen.featured ? " is-featured" : ""
-                }`}
+                } reveal-child`}
                 key={screen.id}
               >
                 <div className="phone-spotlight" aria-hidden="true"></div>
@@ -141,21 +156,8 @@ export default function Sections() {
               </p>
 
               <div className="trust-list">
-                {[
-                  {
-                    title: "Educational support, not diagnosis",
-                    text: "NutriScan supports day-to-day food decisions. It does not replace clinical advice from your physician or dietitian.",
-                  },
-                  {
-                    title: "Transparent condition logic",
-                    text: "Each verdict references the specific nutrient signals relevant to your selected health profile, so you know why a food was flagged.",
-                  },
-                  {
-                    title: "Clear language for real moments",
-                    text: "Verdicts are plain-worded and specific — not generic health scores that require interpretation.",
-                  },
-                ].map((item) => (
-                  <article key={item.title}>
+                {trustItems.map((item) => (
+                  <article key={item.title} className="reveal-child">
                     <h3>{item.title}</h3>
                     <p>{item.text}</p>
                   </article>
@@ -167,6 +169,13 @@ export default function Sections() {
               className="medical-disclaimer"
               aria-label="Medical disclaimer"
             >
+              <div className="medical-disclaimer-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 16v-4"/>
+                  <path d="M12 8h.01"/>
+                </svg>
+              </div>
               <p className="evidence-label">Medical disclaimer</p>
               <h3>Not a diagnostic tool.</h3>
               <p>

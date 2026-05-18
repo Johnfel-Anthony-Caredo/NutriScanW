@@ -4,6 +4,7 @@ const base = import.meta.env.BASE_URL;
 export default function Hero() {
   return (
     <section className="hero" id="home">
+      <div className="hero-bg-accent" aria-hidden="true" />
       <div className="hero-inner">
         <div className="hero-content">
           <h1 className="hero-title">
@@ -23,6 +24,7 @@ export default function Hero() {
 
         <div className="hero-visual">
           <div className="hero-glow" aria-hidden="true"></div>
+          <div className="hero-glow-secondary" aria-hidden="true"></div>
           <img
             className="hero-phone hero-phone-back"
             src={`${base}dashboard.png`}
